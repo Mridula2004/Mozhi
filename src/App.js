@@ -24,6 +24,7 @@ const App = () => {
   const [showTutorial, setShowTutorial] = useState(false); // State to toggle tutorial view
   const badWordsTamil = ['வீய்ம்', 'அருயான்']; // Example Tamil bad words
 
+
   const recognitionRef1 = useRef(null);
   const recognitionRef2 = useRef(null);
   const timeoutRef1 = useRef(null);
@@ -242,6 +243,9 @@ const App = () => {
           <button onClick={() => handleTabChange('history')} className={`tab-button ${currentTab === 'history' ? 'active' : ''}`}>
             Saved Phrases
           </button>
+          <button onClick={() => handleTabChange('team')} className={`tab-button ${currentTab === 'team' ? 'active' : ''}`}>
+            Team Details
+          </button>
           <button onClick={handleTutorialClick} className="tab-button">
             Tutorial
           </button>
@@ -382,6 +386,33 @@ const App = () => {
               </ul>
             </div>
           )}
+          {currentTab === 'team' && ( // Team Details tab content
+  <main className="App-main">
+  
+  <div className="details-container">
+  
+    <div className="team-details">
+      <h3>Team Details</h3>
+      <ul>
+        <li>Mridula Prasad</li>
+        <li>Kaviya R</li>
+        <li>Tejaswini Dubey</li>
+        <li>Harshini V</li>
+        <li>Devika Prashant</li>
+      </ul>
+    </div>
+    <div className="guides">
+      <h3>Guided by:</h3>
+      <ul>
+        <li>Dr. Raj Ramachandran</li>
+        <li>Prof. Suganeshwari G</li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+)}
+
         </>
       )}
     </div>
