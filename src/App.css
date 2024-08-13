@@ -290,3 +290,24 @@ button {
 .bgwhite {
   background-color: rgba(255, 255, 255, 0.8); /* 80% opacity */
 }
+
+.App-main {
+  padding: 20px;
+}
+
+.details-container {
+  margin-left: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.team-details,
+.guides {
+  flex: 4;
+  margin-right: 50px;
+  font-size: x-large;
+}
+
+.guides {
+  margin-right: 0;
+}
